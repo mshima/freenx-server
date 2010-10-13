@@ -31,8 +31,9 @@ Requires: binutils
 Requires: Xdialog
 Requires: /usr/bin/xvt
 Requires: schedutils
+Requires: zenity
 %endif
-BuildPreReq: rpm-build-compat
+BuildPreReq: rpm-build-intro
 BuildRequires: imake xorg-cf-files gccmakedep
 
 %description
