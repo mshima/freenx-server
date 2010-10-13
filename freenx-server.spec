@@ -1,7 +1,7 @@
 %define cups_root %_prefix/lib
 Name: freenx-server
 Version: 0.7.4
-Release: alt25
+Release: alt26
 
 Summary: Freenx application/thin-client server
 Group: Networking/Remote access
@@ -136,6 +136,9 @@ fi
 %_datadir/%name
 
 %changelog
+* Wed Oct 13 2010 Boris Savelev <boris@altlinux.org> 0.7.4-alt26
+- fix session time detect (closes: #23989)
+
 * Wed Oct 13 2010 Boris Savelev <boris@altlinux.org> 0.7.4-alt25
 - cherry-pick some commits from rx-etersoft
   * use md5sum (closes: #24254)
