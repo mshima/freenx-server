@@ -10,7 +10,7 @@ if [ -d "$nxdir" -a $SESSION_TTL -gt 0 ] ; then
   for f in `ls $nxdir` ; do
     sessiontype=`cat $nxdir/$f | grep status | cut -d= -f2`
     user=`cat $nxdir/$f | grep userName | cut -d= -f2`
-    sessiontime=`cat $nxdir/$f | grep creationTime | cut -d= -f2`
+    sessiontime=`stat -c %Y $nxdir/$f`
     sessionid=`cat $nxdir/$f | grep sessionId | cut -d= -f2`
     criticaltime=$(expr `date +%s` - $SESSION_TTL)
     if [ $sessiontime -lt $criticaltime ] ; then
