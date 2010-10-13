@@ -1,7 +1,7 @@
 %define cups_root %_prefix/lib
 Name: freenx-server
 Version: 0.7.4
-Release: alt24
+Release: alt25
 
 Summary: Freenx application/thin-client server
 Group: Networking/Remote access
@@ -136,6 +136,12 @@ fi
 %_datadir/%name
 
 %changelog
+* Wed Oct 13 2010 Boris Savelev <boris@altlinux.org> 0.7.4-alt25
+- cherry-pick some commits from rx-etersoft
+  * use md5sum (closes: #24254)
+  * add '-dpi 96' to nxagent extra options
+  * remove original node.conf. Load all from node.conf.d
+
 * Sun Jul 25 2010 Boris Savelev <boris@altlinux.org> 0.7.4-alt24
 - fix printer forwarding (thx to dimbor and unixforum)
 - nxlog now always return '0'
