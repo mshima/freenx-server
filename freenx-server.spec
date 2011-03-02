@@ -1,16 +1,16 @@
 %define cups_root %_prefix/lib
 Name: freenx-server
 Version: 0.7.4
-Release: alt26
+Release: alt27
 
 Summary: Freenx application/thin-client server
 Group: Networking/Remote access
 License: GPLv2
 Url: http://wiki.etersoft.ru/RX
 
-Packager: Denis Baranov <baraka@etersoft.ru>
+Packager: Boris Savelev <boris@altlinux.org>
 
-Source: %name-%version.tar.bz2
+Source: %name-%version.tar
 Source1: %name.init
 Source2: %name.outformat
 Source6: sudoers.conf
@@ -143,6 +143,9 @@ fi
 %_datadir/%name/
 
 %changelog
+* Wed Mar 02 2011 Boris Savelev <boris@altlinux.org> 0.7.4-alt27
+- merge with rx-etersoft
+
 * Wed Oct 13 2010 Boris Savelev <boris@altlinux.org> 0.7.4-alt26
 - fix session time detect (closes: #23989)
 
