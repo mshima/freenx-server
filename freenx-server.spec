@@ -1,7 +1,7 @@
 %define cups_root %_prefix/lib
 Name: freenx-server
 Version: 0.7.4
-Release: alt27
+Release: alt28
 
 Summary: Freenx application/thin-client server
 Group: Networking/Remote access
@@ -143,6 +143,11 @@ fi
 %_datadir/%name/
 
 %changelog
+* Wed Mar 02 2011 Boris Savelev <boris@altlinux.org> 0.7.4-alt28
+- merge with snejok@:
+    * puts stderr from wait to dev/null
+    * fix work with KDE4 (ALT# 25183)
+
 * Wed Mar 02 2011 Boris Savelev <boris@altlinux.org> 0.7.4-alt27
 - merge with rx-etersoft
 
