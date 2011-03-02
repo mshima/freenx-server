@@ -1,7 +1,7 @@
 %define cups_root %_prefix/lib
 Name: freenx-server
 Version: 0.7.4
-Release: alt26
+Release: alt27
 
 Summary: Freenx application/thin-client server
 Group: Networking/Remote access
@@ -55,7 +55,6 @@ sed -i "s|\$NX_DIR/lib|%_libdir|g" nxloadconfig
 # nxredir nxsmb
 sed -i "s|/usr/lib|%_libdir|g" nxredir/nxredir
 sed -i "s|/usr/lib|%_libdir|g" nxredir/nxsmb
-sed -i "s|/usr/lib|%_libdir|g" %SOURCE10
 sed -i "s|%_libdir/cups|%cups_root/cups|g" nxredir/nxsmb
 
 %build
@@ -136,6 +135,10 @@ fi
 %_datadir/%name
 
 %changelog
+* Wed Mar 02 2011 Lenar Shakirov <snejok@altlinux.ru> 0.7.4-alt27
+- puts stderr from wait to dev/null
+- fix work with KDE4 (ALT# 25183)
+
 * Wed Oct 13 2010 Boris Savelev <boris@altlinux.org> 0.7.4-alt26
 - fix session time detect (closes: #23989)
 
