@@ -1,7 +1,7 @@
 %define cups_root %_prefix/lib
 Name: freenx-server
 Version: 0.7.4
-Release: alt28
+Release: alt29
 
 Summary: Freenx application/thin-client server
 Group: Networking/Remote access
@@ -143,6 +143,9 @@ fi
 %_datadir/%name/
 
 %changelog
+* Fri Jun 17 2011 Boris Savelev <boris@altlinux.org> 0.7.4-alt29
+- fix LD_PRELOAD path to libXrender
+
 * Wed Mar 02 2011 Boris Savelev <boris@altlinux.org> 0.7.4-alt28
 - merge with snejok@:
     * puts stderr from wait to dev/null
