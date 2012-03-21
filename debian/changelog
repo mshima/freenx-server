@@ -1,3 +1,9 @@
+freenx-server (0.7.3.git977c28d-0~ppa2~precise1) precise; urgency=low
+
+  * Many fixes.
+
+ -- Marcelo Boveto Shima <marceloshima@gmail.com>  Wed, 21 Mar 2012 18:27:08 -0300
+
 freenx-server (0.7.3.git977c28d-0~ppa1~precise1) precise; urgency=low
 
   * New upload.

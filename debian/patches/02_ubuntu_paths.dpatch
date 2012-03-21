@@ -32,7 +32,7 @@ Index: freenx-server-0.7.3.git110520.3884279/node.conf.sample
 +#COMMAND_START_GNOME='gnome-session --session gnome-fallback'
 +
 +# Other options is to use unity-2d
-+#COMMAND_START_GNOME='gnome-session --session unity-2d'
++#COMMAND_START_GNOME='gnome-session --session ubuntu-2d'
  
  # The key that contains the name of the script that starts a CDE session.
  # It's run when a 'unix-cde' session is requested by the client.
