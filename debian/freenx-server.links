@@ -1,0 +1,2 @@
+usr/bin/nxserver-suid usr/lib/nx/nxserver-suid
+usr/bin/nxloadconfig usr/lib/nx/nxloadconfig
