@@ -1,8 +1,8 @@
-freenx-server (0.7.3.1.git977c28d-0~ppa3~precise1) precise; urgency=low
+freenx-server (0.7.3+git.120322.977c28d-0~ppa3~precise1ubuntu1) precise; urgency=low
 
   * Rename and reupload
 
- -- Marcelo Boveto Shima <marceloshima@gmail.com>  Thu, 22 Mar 2012 10:49:07 -0300
+ -- Marcelo Boveto Shima <marceloshima@gmail.com>  Thu, 22 Mar 2012 10:52:54 -0300
 
 freenx-server (0.7.3.git977c28d-0~ppa2~precise1) precise; urgency=low
 
