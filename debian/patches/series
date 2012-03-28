@@ -4,3 +4,4 @@ nxnode
 fix-getparam-url-decode.patch
 nxdialog-zenity-support.patch
 color_fix.patch
+fix_resize_nxnode.patch
