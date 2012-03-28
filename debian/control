@@ -79,3 +79,10 @@ Description: Remote desktop/application/thin-client server ConsoleKit helper
  using X applications over a network, especially a slow one.
  .
  This package contains a helper launcher to create a ConsoleKit session.
+
+Package: nx-common
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: freenx-server (< 0.7.3+teambzr104-0)
+Description: NX server common package.
+ Common package for the NX server alternatives
