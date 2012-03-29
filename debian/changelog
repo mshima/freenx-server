@@ -1,3 +1,9 @@
+freenx-server (0.7.3.zgit.120322.977c28d-0~ppa6~precise1ubuntu1) precise; urgency=low
+
+  * Add freenx-server-usermode.postinst
+
+ -- Marcelo Boveto Shima <marceloshima@gmail.com>  Thu, 29 Mar 2012 11:52:16 -0300
+
 freenx-server (0.7.3.zgit.120322.977c28d-0~ppa6~precise1) precise; urgency=low
 
   * Split to freenx-server-usermode
