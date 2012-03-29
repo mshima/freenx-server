@@ -1,6 +1,4 @@
 usr/lib/nx/nxloadconfig			usr/bin
-usr/lib/nx/nxserver-suid		usr/bin
-usr/lib/nx/nx-session-launcher-suid	usr/bin/
 debian/keys/*				var/lib/nxserver/home/default_keys
 debian/00_ubuntu_overrides.conf		usr/share/freenx-server/node.conf.d
 debian/02_look_for_consolekit.conf	usr/share/freenx-server/node.conf.d
@@ -10,7 +8,6 @@ usr/lib/nx/nxnode
 usr/lib/nx/nxnode-login
 usr/lib/nx/nxserver
 usr/lib/nx/nxserver-helper
-usr/lib/nx/nxserver-usermode
 usr/lib/nx/nxviewer_helper
 usr/lib/nx/nxpasswd
 usr/lib/nx/nxdesktop_helper

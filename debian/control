@@ -35,6 +35,16 @@ Description: Remote desktop/application/thin-client server
  This package is a meta package that depends on freenx-server (core server),
  freenx-smb (printer/folder) and freenx-desktop (connect to rdp session)
 
+Package: freenx-usermode
+Architecture: all
+Depends: ${misc:Depends}, freenx-server
+Description: Remote desktop/application/thin-client server
+ NX is a software suite from NoMachine which implements very efficient
+ compression of the X11 protocol. This increases performance when
+ using X applications over a network, especially a slow one.
+ .
+ This package is contains the usermode binary files.
+
 Package: freenx-smb
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}, smbfs,

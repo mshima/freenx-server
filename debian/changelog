@@ -1,3 +1,10 @@
+freenx-server (0.7.3.zgit.120322.977c28d-0~ppa6~precise1) precise; urgency=low
+
+  * Split to freenx-server-usermode
+  * Remove upstart script from debian compatibility
+
+ -- Marcelo Boveto Shima <marceloshima@gmail.com>  Thu, 29 Mar 2012 11:45:40 -0300
+
 freenx-server (0.7.3.zgit.120322.977c28d-0~ppa5~precise1) precise; urgency=low
 
   * Add nx-common
