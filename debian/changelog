@@ -1,3 +1,9 @@
+freenx-server (0.7.3.zgit.120322.977c28d-0~ppa8~precise1) precise; urgency=low
+
+  * Fix nxkeymanager permission
+
+ -- Marcelo Boveto Shima <marceloshima@gmail.com>  Fri, 30 Mar 2012 11:36:22 -0300
+
 freenx-server (0.7.3.zgit.120322.977c28d-0~ppa7~precise1) precise; urgency=low
 
   * Add freenx-server-usermode.postinst
