@@ -44,15 +44,18 @@ case "$1" in
 		chown nx:root /var/log/nxserver.log
 	fi
 
-	if [ ! -e ~nx/db ]
-	then
-		mkdir ~nx/db
-		mkdir ~nx/db/failed
-		mkdir ~nx/db/running
-		mkdir ~nx/db/closed
-		chmod -R 700 ~nx/db
-		chown -R nx:root ~nx/db
-	fi
+	chmod -R 700 /var/lib/nxserver/db
+	chown -R nx:root /var/lib/nxserver/db
+
+	#if [ ! -e ~nx/db ]
+	#then
+	#	mkdir ~nx/db
+	#	mkdir ~nx/db/failed
+	#	mkdir ~nx/db/running
+	#	mkdir ~nx/db/closed
+	#	chmod -R 700 ~nx/db
+	#	chown -R nx:root ~nx/db
+	#fi
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

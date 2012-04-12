@@ -1,3 +1,9 @@
+freenx-server (0.7.3.zgit.120322.977c28d-0~ppa9) precise; urgency=low
+
+  * Fix /var/lib/nxserver/db permission
+
+ -- Marcelo Boveto Shima <marceloshima@gmail.com>  Thu, 12 Apr 2012 11:48:37 -0300
+
 freenx-server (0.7.3.zgit.120322.977c28d-0~ppa8~precise1) precise; urgency=low
 
   * Fix nxkeymanager permission

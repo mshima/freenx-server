@@ -34,6 +34,7 @@ case "$1" in
 		rm -f /etc/nxserver/users.id_dsa
 		rm -f /etc/nxserver/users.id_dsa.pub
 		rm -f  /var/log/nxserver.log
+		rm -rf /var/lib/nxserver/db
 		;;
 	remove|upgrade|failed-upgrade|abort-upgrade|abort-install|disappear)
 		;;
