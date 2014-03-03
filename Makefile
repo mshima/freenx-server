@@ -62,6 +62,9 @@ debian-tarball:
 	[ -d ".bzr" ] && tar -czf ../freenx-server_0.7.3+teambzr`bzr revno`.orig.tar.gz freenx-server
 	rm -rf freenx-server
 
+git-debian-tarball:
+	git archive HEAD | gzip > ../freenx-server_0.7.3.zgit.`date +%y%m%d.%H%M`.`git rev-list -n1 --abbrev-commit HEAD`.orig.tar.gz
+
 git-tarball:
 	git archive HEAD | gzip > ../freenx-server_`git rev-list -n1 --abbrev-commit HEAD`.tar.gz
 
