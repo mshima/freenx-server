@@ -160,7 +160,8 @@
 # Note: You need to have the rights to access the display
 #       else it does not work.
 #
-#ENABLE_DESKTOP_SHARING=1
+# Disabled by default to fix resuming on nx4 client
+#ENABLE_DESKTOP_SHARING=0
 
 #
 # General shadowing / mirroring notes:
