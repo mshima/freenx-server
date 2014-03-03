@@ -1,3 +1,16 @@
+freenx-server (0.7.3.zgit.120322.977c28d-0~ppa11) precise; urgency=low
+
+  * Add dependency alternative on kde-runtime, gnome fallback and lxde-core
+  * Don't restart on upgrade
+
+ -- Marcelo Boveto Shima <marceloshima@gmail.com>  Wed, 09 May 2012 10:21:53 -0300
+
+freenx-server (0.7.3.zgit.120322.977c28d-0~ppa10) precise; urgency=low
+
+  * Remove esound/arts depends
+
+ -- Marcelo Boveto Shima <marceloshima@gmail.com>  Wed, 02 May 2012 15:19:50 -0300
+
 freenx-server (0.7.3.zgit.120322.977c28d-0~ppa9) precise; urgency=low
 
   * Fix /var/lib/nxserver/db permission
