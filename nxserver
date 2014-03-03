@@ -319,9 +319,11 @@ _session_list_user_suspended()
 			[[ $(getparam screeninfo) =~ $pattern ]]
 			geom=${BASH_REMATCH[1]}
 			depth=${BASH_REMATCH[2]}
+			[ "$depth" = "32" ] && depth=24
 			render=${BASH_REMATCH[3]}
 			[[ $3 =~ $pattern ]]
 			udepth=${BASH_REMATCH[2]}
+			[ "$udepth" = "32" ] && udepth=24
 			urender=${BASH_REMATCH[3]}
 
 			mode="D"
