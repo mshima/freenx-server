@@ -1,3 +1,9 @@
+freenx-server (0.7.3.zgit.140303.1848.e81c1e4-0~ppa1) precise; urgency=low
+
+  * New upstream release
+
+ -- Marcelo Boveto Shima <marceloshima@gmail.com>  Mon, 03 Mar 2014 18:49:09 -0300
+
 freenx-server (0.7.3.zgit.120322.977c28d-0~ppa11) precise; urgency=low
 
   * Add dependency alternative on kde-runtime, gnome fallback and lxde-core
