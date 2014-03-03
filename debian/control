@@ -13,7 +13,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, debconf (>= 0.5.00) | debconf-2.0,
  nx-common,
  gnome-session | gnome-session-fallback | kde-runtime | kdebase-workspace-bin | ksmserver | xfce4-session | freenx-rdp | freenx-vnc | lxde-core
 Conflicts: freenx-media
-Recommends: xfonts-base, consolekit
+Recommends: xfonts-base
 Suggests: freenx-session-launcher, esound-clients, libarts1c2 | libarts1, xdm, freenx
 Description: Remote desktop/application/thin-client server core features
  NX is a software suite from NoMachine which implements very efficient
