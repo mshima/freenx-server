@@ -11,7 +11,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, debconf (>= 0.5.00) | debconf-2.0,
  nxagent (>= 2.1.0-0), openssh-server, openssh-client, netcat, expect,
  bash (>= 2.05), adduser, binutils, x11-xserver-utils, python,
  nx-common,
- gnome-session | gnome-session-fallback | kde-runtime | kdebase-workspace-bin | ksmserver | xfce4-session | freenx-rdp | freenx-vnc | lxde-core
+ lxde-core | gnome-session-flashback | kde-workspace | xfce4-session | freenx-vnc | freenx-rdp
 Conflicts: freenx-media
 Recommends: xfonts-base
 Suggests: freenx-session-launcher, esound-clients, libarts1c2 | libarts1, xdm, freenx
