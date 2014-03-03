@@ -4,6 +4,7 @@ SHELL = /bin/bash
 
 SUBDIRS=nxredir nxviewer-passwd nxserver-helper nxserver-suid nx-session-launcher
 PROGRAMS=nxacl.sample nxacl.app nxcheckload.sample nxcups-gethost nxdesktop_helper nxdialog nxkeygen nxloadconfig nxnode nxnode-login nxprint nxserver nxserver-helper/nxserver-helper nxsetup nxviewer_helper nxviewer-passwd/nxpasswd/nxpasswd nx-session-launcher/nx-session-launcher nx-session-launcher/nx-session-launcher-suid nxserver-usermode nxserver-suid/nxserver-suid
+PATH_BIN=/usr/lib/nx/
 
 all:
 	cd nxviewer-passwd && xmkmf && make Makefiles && make depend
@@ -28,7 +29,10 @@ nxenv_install:
 	do\
 	        install -m755 $$i $(DESTDIR)/$$PATH_BIN/ || exit 1;\
 	done
-	install -m644 node.conf.sample $(DESTDIR)/$$NX_ETC_DIR/
+	install -m644 node.conf.sample $(DESTDIR)/$$NX_ETC_DIR/node.conf
+	install -m755 nxshadowacl.sample $(DESTDIR)/$$NX_ETC_DIR/nxshadowacl
+	install -m755 nxacl.sample $(DESTDIR)/$$NX_ETC_DIR/nxacl
+	install -m755 nxcheckload.sample $(DESTDIR)/$$NX_ETC_DIR/nxcheckload
 	$(MAKE) -C nxredir install
 	# uncomment the following line to make
 	# nxserver-suid suid nx
