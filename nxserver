@@ -289,11 +289,11 @@ _session_list_user_suspended()
 	if [ -z "$4" ]
 	then
 		
-		echo "Display Type             Session ID                       Options  Depth Screensize     Available Session Name" >> $TMPFILE
-		echo "------- ---------------- -------------------------------- -------- ----- -------------- --------- ----------------------" >> $TMPFILE
+		echo "Display Type           Session ID                       Services Dept Screensize     Status        Session Name                                                 Username" >> $TMPFILE
+		echo "------- -------------- -------------------------------- -------- ---- -------------- ------------- ------------------------------------------------------------ --------------------------------" >> $TMPFILE
 	else
-		echo "Display Type             Session ID                       Options  Depth Screen         Status      Session Name" >> $TMPFILE
-		echo "------- ---------------- -------------------------------- -------- ----- -------------- ----------- ------------------------------" >> $TMPFILE
+		echo "Display Type           Session ID                       Services Dept Screensize     Status        Session Name                                                 Username" >> $TMPFILE
+		echo "------- -------------- -------------------------------- -------- ---- -------------- ------------- ------------------------------------------------------------ --------------------------------" >> $TMPFILE
 	fi
 	for i in $NX_SESS_DIR/running/*
 	do
@@ -343,15 +343,15 @@ _session_list_user_suspended()
 			if [ "$4" = "vnc" -a "$ENABLE_MIRROR_VIA_VNC" = "1" ] && stringinstring "unix-" "$(getparam type)"
 			then
 				available=$(getparam status)
-				printf "%-7s %-16s %32s %8s %5s %-14s %-11s %s\n" "$(getparam display)" "vnc-shadowed" "$(getparam sessionId)" "$options" "$depth" "$geom" "$available" "$(getparam sessionName) (Mirrored)" >> $TMPFILE
+				printf "%-7s %-14s %32s %8s %4s %-14s %-13s %-60s %-32s\n" "$(getparam display)" "vnc-shadowed" "$(getparam sessionId)" "$options" "$depth" "$geom" "$available" "$(getparam sessionName) (Mirrored)" "$(getparam userName)" >> $TMPFILE
 			elif [ "$4" = "shadow" ]
 			then
 				available=$(getparam status)
-				printf "%-7s %-16s %32s %8s %5s %-14s %-11s %s\n" "$(getparam display)" "$(getparam type)" "$(getparam sessionId)" "$options" "$depth" "$geom" "$available" "$(getparam sessionName) ($(getparam userName)) (Shadowed)" >> $TMPFILE
+				printf "%-7s %-14s %32s %8s %4s %-14s %-13s %-60s %-32s\n" "$(getparam display)" "$(getparam type)" "$(getparam sessionId)" "$options" "$depth" "$geom" "$available" "$(getparam sessionName) (Shadowed)" "$(getparam userName)" >> $TMPFILE
 			else
 				# only unix-* sessions can be resumed, but other session types can still be terminated
 				stringinstring "unix-" "$4" || available="N/A"
-				printf "%-7s %-16s %32s %8s %5s %-14s %-11s %s\n" "$(getparam display)" "$(getparam type)" "$(getparam sessionId)" "$options" "$depth" "$geom" "$available" "$(getparam sessionName)" >> $TMPFILE
+				printf "%-7s %-14s %32s %8s %4s %-14s %-13s %-60s %-32s\n" "$(getparam display)" "$(getparam type)" "$(getparam sessionId)" "$options" "$depth" "$geom" "$available" "$(getparam sessionName)" "$(getparam userName)" >> $TMPFILE
 			fi
 		fi
 		[ "$1" = ".*" -o "$(getparam userName)" = "$1" ] && let SESSION_COUNT_USER=$SESSION_COUNT_USER+1
@@ -365,7 +365,7 @@ _session_list_user_suspended()
 	# '
 			uniqueid=$(echo $[$RANDOM*$RANDOM] | $COMMAND_MD5SUM | cut -d" " -f1 | tr "[a-z]" "[A-Z]")
 			DESKTOP_SHARING_IDS="$DESKTOP_SHARING_IDS $uniqueid=$i"
-			printf "%-7s %-16s %32s %8s %5s %-14s %-11s %s\n" "$i" "Local" "$uniqueid" "--------" "$udepth" "$(echo $3 | cut -d'x' -f1,2)" "Running" "X$i (Local)" >> $TMPFILE
+			printf "%-7s %-14s %32s %8s %4s %-14s %-13s %-60s %-32s\n" "$i" "Local" "$uniqueid" "--------" "$udepth" "$(echo $3 | cut -d'x' -f1,2)" "Running" "X$i (Local)" >> $TMPFILE
 		done
 	fi
 	
