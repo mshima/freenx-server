@@ -486,7 +486,7 @@
 # Add the nx libraries to LD_LIBRARY_PATH before starting nx agents.
 # WARNING: This will NOT (and should not) affect applications. ONLY Disable
 # this if the nx libraries are in a standard system path (such as /usr/lib)!
-#SET_LD_LIBRARY_PATH="1"
+#SET_LD_LIBRARY_PATH="0"
 
 
 # The command binary for the default window manager. If set it is run when a
@@ -514,15 +514,18 @@
 
 # The key that contains the name of the script that starts a KDE session.
 # It's run when a 'unix-kde' session is requested by the client.
-#COMMAND_START_KDE="/usr/bin/ssh-agent /usr/bin/dbus-launch --exit-with-session /usr/bin/startkde"
+#COMMAND_START_KDE='startkde'
 
 # The key that contains the name of the script that starts a gnome session.
 # It's run when a 'unix-gnome' session is requested by the client.
-#COMMAND_START_GNOME="/usr/bin/ssh-agent /usr/bin/dbus-launch --exit-with-session /usr/bin/gnome-session"
+#COMMAND_START_GNOME='gnome-session --session gnome-fallback'
+
+# Other options is to use unity-2d
+#COMMAND_START_GNOME='gnome-session --session ubuntu-2d'
 
 # The key that contains the name of the script that starts a CDE session.
 # It's run when a 'unix-cde' session is requested by the client.
-#COMMAND_START_CDE=cdwm
+#COMMAND_START_CDE='xfce4-session'
 
 # The key that contains the name of the complete path of command name
 # 'xterm'. It is run when a unix "xterm" session is requested by the
@@ -642,7 +645,7 @@
 # set this to "1".
 # 
 # If nxdesktop cannot be found this is set automatically to "1".
-#ENABLE_EXTERNAL_NXDESKTOP="0"
+#ENABLE_EXTERNAL_NXDESKTOP="1"
 
 # This configuration variable determines if 'rdesktop' command should be run with -k keyboard option
 # or if the keyboard should be autodetected.
@@ -653,4 +656,4 @@
 # set this to "1".
 # 
 # If nxviewer cannot be found this is set automatically to "1".
-#ENABLE_EXTERNAL_NXVIEWER="0"
+#ENABLE_EXTERNAL_NXVIEWER="1"
