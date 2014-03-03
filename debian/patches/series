@@ -1,4 +1,3 @@
 02_ubuntu_paths.dpatch
-fix-getparam-url-decode.patch
 nxdialog-zenity-support.patch
 fix_resize_nxnode.patch
